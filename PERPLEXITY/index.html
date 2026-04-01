@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perplexity</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Phosphor Icons (for sleek, modern line and fill icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                     <i class="ph ph-asterisk"></i>
+                     <span class="logo-text">perplexity</span>
+                </a>
+            </div>
+
+            <button class="new-thread-btn">
+                <span class="btn-left">
+                    <i class="ph ph-plus"></i> New thread
+                </span>
+                <span class="shortcut text-muted">Ctrl I</span>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="ph ph-magnifying-glass"></i> Search
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-compass"></i> Discover
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-squares-four"></i> Spaces
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-trend-up"></i> Finance
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-heart"></i> Health
+                </a>
+            </nav>
+
+            <div class="nav-menu mt-auto">
+                <a href="#" class="nav-item">
+                    <i class="ph ph-device-mobile"></i> Download App
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-twitter-logo"></i> X (Twitter)
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-discord-logo"></i> Discord
+                </a>
+            </div>
+            
+            <div class="history-section">
+                <div class="history-title">History</div>
+                <div class="history-empty text-muted">Recent and active threads will appear here.</div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace Area -->
+        <main class="main-content">
+            <div class="center-content">
+                <h1 class="main-title">perplexity</h1>
+                
+                <!-- Intelligent Search Box -->
+                <div class="search-container">
+                    <textarea class="search-input" placeholder="Ask anything..." rows="1"></textarea>
+                    
+                    <div class="search-controls">
+                        <div class="left-controls">
+                            <button class="control-btn focus-btn">
+                                <i class="ph ph-plus"></i>
+                                Focus
+                            </button>
+                            <button class="control-btn attach-btn">
+                                <i class="ph ph-paperclip"></i>
+                                Attach
+                            </button>
+                        </div>
+                        
+                        <div class="right-controls">
+                           <label class="pro-toggle">
+                               <span>Pro</span>
+                               <div class="toggle-switch"></div>
+                           </label>
+                           <button class="submit-btn" disabled>
+                               <i class="ph ph-arrow-right"></i>
+                           </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Container (Hidden by default) -->
+                <div class="results-container" style="display: none;">
+                    <div class="user-query"></div>
+                    <div class="ai-response"></div>
+                </div>
+
+                <!-- Suggestions / Starter Prompts -->
+                <div class="suggestions-container">
+                    <div class="suggestions-header">
+                       <i class="ph ph-lightbulb"></i> Try asking
+                    </div>
+                    <div class="suggestions-grid">
+                        <button class="suggestion-btn" title="Build a dashboard tracking my business metrics">
+                            <div class="suggestion-icon"><i class="ph ph-chart-bar"></i></div>
+                            <div class="suggestion-text">Build a dashboard tracking my business metrics</div>
+                        </button>
+                        <button class="suggestion-btn" title="Set up an automated email or Slack workflow">
+                            <div class="suggestion-icon"><i class="ph ph-envelope"></i></div>
+                            <div class="suggestion-text">Set up an automated email or Slack workflow</div>
+                        </button>
+                        <button class="suggestion-btn" title="Turn my idea into a functional prototype">
+                            <div class="suggestion-icon"><i class="ph ph-lightbulb"></i></div>
+                            <div class="suggestion-text">Turn my idea into a functional prototype</div>
+                        </button>
+                        <button class="suggestion-btn" title="Build a web app with user auth and a database">
+                            <div class="suggestion-icon"><i class="ph ph-database"></i></div>
+                            <div class="suggestion-text">Build a web app with user auth and a database</div>
+                        </button>
+                        <button class="suggestion-btn" title="Build a working landing page for my product">
+                            <div class="suggestion-icon"><i class="ph ph-layout"></i></div>
+                            <div class="suggestion-text">Build a working landing page for my product</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contextual / Authentication Panel -->
+        <aside class="auth-panel">
+            <div class="auth-header">
+               <button class="close-btn" aria-label="Close sidebar"><i class="ph ph-x"></i></button>
+            </div>
+            
+            <div class="auth-content">
+                <div class="auth-icon-large">
+                   <i class="ph ph-asterisk"></i>
+                </div>
+                <h2>Sign in or create an account</h2>
+                <p class="text-muted text-center mb-4">Save and sync your searches</p>
+                
+                <button class="auth-provider-btn bg-white text-black">
+                    <i class="ph-fill ph-google-logo"></i> Continue with Google
+                </button>
+                <button class="auth-provider-btn">
+                    <i class="ph-fill ph-apple-logo"></i> Continue with Apple
+                </button>
+                
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                
+                <div class="email-auth">
+                    <input type="email" placeholder="Enter your email" class="email-input">
+                    <button class="auth-provider-btn email-btn" disabled>
+                        Continue with email
+                    </button>
+                </div>
+                
+                <button class="sso-btn">Single sign-on (SSO)</button>
+            </div>
+        </aside>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
